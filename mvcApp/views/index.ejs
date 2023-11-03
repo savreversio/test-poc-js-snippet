@@ -3,9 +3,22 @@
   <head>
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/stylesheets/reversioDefaultStyles.css' />
   </head>
   <body>
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
+
+                <div id="button"></div>
+
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="/javascripts/share-link.umd.cjs"></script>
+    <script>
+        const buttonElement = window.React.createElement(window.ShareByLink, { orderId: 'f1ea8c72-2c3e-4eb9-9ba7-889a1ebe8607'})
+        window.ReactDOM.createRoot(document.getElementById('button')).render(
+            buttonElement,
+        )
+    </script>
   </body>
 </html>
